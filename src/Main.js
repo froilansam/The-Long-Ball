@@ -39,6 +39,9 @@ function Main(props) {
 				SplashScreen.preventAutoHide();
 
 				// Load our initial navigation state
+				/**
+				 * Deeplink
+				 */
 				setInitialNavigationState(await getInitialState());
 
 				// Load fonts

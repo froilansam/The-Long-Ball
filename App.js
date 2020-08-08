@@ -8,6 +8,9 @@ import configureStore from './src/store/configureStore';
 import initialState from './src/store/initialState';
 import Main from './src/Main';
 
+/**
+ * Redux
+ */
 const { persistor, store } = configureStore(initialState);
 
 const App = () => (

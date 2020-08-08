@@ -9,11 +9,11 @@ import { login as loginAction } from '~/modules/auth/auth.actions';
 import utils from '~/utils';
 
 import styles from './LoginScreen.style';
-import LongBallForm from '../components/LongBallForm';
+import LongBallForgotForm from '../components/LongBallForgotForm';
 
 const bg = require('~/assets/images/herobanner-image.jpg');
 
-function LoginScreen({ navigation }) {
+function LongBallRegister({ navigation }) {
 	return (
 		<Container>
 			<ImageBackground
@@ -32,18 +32,18 @@ function LoginScreen({ navigation }) {
 				style={{ width: '100%', height: '100%' }}
 			>
 				<Content contentContainerStyle={styles.content} padder>
-					<LongBallForm navigation={navigation} />
+					<LongBallForgotForm navigation={navigation} />
 				</Content>
 			</ImageBackground>
 		</Container>
 	);
 }
 
-LoginScreen.navigationOptions = {
+LongBallRegister.navigationOptions = {
 	header: null,
 };
 
-LoginScreen.propTypes = {
+LongBallRegister.propTypes = {
 	navigation: PropTypes.shape({}).isRequired,
 };
 
@@ -51,4 +51,6 @@ const mapDispatchToProps = {
 	login: loginAction,
 };
 
-export default utils.compose(connect(null, mapDispatchToProps))(LoginScreen);
+export default utils.compose(connect(null, mapDispatchToProps))(
+	LongBallRegister,
+);

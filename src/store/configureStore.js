@@ -9,6 +9,9 @@ import thunk from 'redux-thunk';
 import Reactotron from '../logger';
 import rootReducer from './reducers';
 
+/**
+ * Config
+ */
 const persistedReducer = persistReducer(
 	{
 		key: 'root',
